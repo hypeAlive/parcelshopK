@@ -1,5 +1,8 @@
-package com.gls.parcelshop.model;
+package com.gls.parcelshop.model
 
-public enum DeliveryState {
-    READY_FOR_DELIVERY, OUT_FOR_DELIVERY, DELIVERED, CANCELLED
+enum class DeliveryState {
+    READY_FOR_DELIVERY,
+    OUT_FOR_DELIVERY,
+    DELIVERED,
+    CANCELLED
 }

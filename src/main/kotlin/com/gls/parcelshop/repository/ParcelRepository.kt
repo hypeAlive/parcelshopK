@@ -1,12 +1,11 @@
-package com.gls.parcelshop.repository;
+package com.gls.parcelshop.repository
 
-import com.gls.parcelshop.model.Parcel;
-import java.util.List;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
+import com.gls.parcelshop.model.Parcel
+import org.springframework.data.repository.CrudRepository
+import org.springframework.stereotype.Repository
 
 @Repository
-public interface ParcelRepository extends CrudRepository<Parcel, Long> {
-    List<Parcel> findAll();
-    List<Parcel> findAllByParcelNumber(String parcelNumber);
+interface ParcelRepository : CrudRepository<Parcel, Long> {
+    override fun findAll(): List<Parcel>
+    fun findAllByParcelNumber(parcelNumber: String): List<Parcel>
 }
