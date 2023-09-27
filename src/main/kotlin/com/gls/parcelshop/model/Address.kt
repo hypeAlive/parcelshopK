@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor
 import javax.persistence.*
 
 @Entity
-@NoArgsConstructor
 @Table(name = "address")
 class Address(
     @Id

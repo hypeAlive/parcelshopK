@@ -18,7 +18,7 @@ class ParcelController(
     private val parcelRepository: ParcelRepository? = null
 
     @GetMapping("/parcels")
-    @ResponseStatus(HttpStatus.CREATED)
+    @ResponseStatus(HttpStatus.OK)
     fun getAllParcels(): List<Parcel> {
         return parcelRepository!!.findAll()
     }

@@ -6,7 +6,6 @@ import javax.validation.constraints.NotNull
 
 
 @Entity
-@NoArgsConstructor
 @Table(name = "parcel")
 class Parcel(
     @Id
