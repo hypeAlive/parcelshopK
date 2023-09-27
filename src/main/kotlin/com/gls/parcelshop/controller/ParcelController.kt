@@ -10,18 +10,23 @@ import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/api/v1")
-class ParcelController @Autowired constructor(
-    private val parcelRepository: ParcelRepository,
+class ParcelController(
     private val notificationService: NotificationService
 ) {
+
+    @Autowired
+    private val parcelRepository: ParcelRepository? = null
+
     @GetMapping("/parcels")
+    @ResponseStatus(HttpStatus.CREATED)
     fun getAllParcels(): List<Parcel> {
-        return parcelRepository.findAll()
+        return parcelRepository!!.findAll()
     }
 
     @PostMapping(value = ["/parcels"], consumes = ["application/json"])
+    @ResponseStatus(HttpStatus.CREATED)
     fun insertNewParcels(@RequestBody parcel: Parcel): ResponseEntity<Parcel> {
-        val savedParcel = parcelRepository.save(parcel)
+        val savedParcel = parcelRepository!!.save(parcel)
         notificationService.notifySomeoneAboutChange(savedParcel)
         return ResponseEntity(savedParcel, HttpStatus.CREATED)
     }
