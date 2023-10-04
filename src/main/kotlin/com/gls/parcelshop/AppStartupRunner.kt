@@ -5,13 +5,11 @@ import com.gls.parcelshop.model.DeliveryState
 import com.gls.parcelshop.model.Parcel
 import com.gls.parcelshop.repository.ParcelRepository
 import com.gls.parcelshop.util.ApplicationLogger.info
-import lombok.extern.slf4j.Slf4j
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.ApplicationArguments
 import org.springframework.boot.ApplicationRunner
 import org.springframework.stereotype.Component
 
-@Slf4j
 @Component
 class AppStartupRunner @Autowired constructor(private val parcelRepository: ParcelRepository) : ApplicationRunner {
     override fun run(args: ApplicationArguments) {
