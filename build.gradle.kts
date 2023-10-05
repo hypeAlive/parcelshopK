@@ -3,8 +3,6 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     id("org.springframework.boot") version "2.7.8"
     id("io.spring.dependency-management") version "1.0.14.RELEASE"
-    kotlin("plugin.lombok") version "1.9.10"
-    id("io.freefair.lombok") version "8.1.0"
     java
     kotlin("jvm") version "1.9.10"
 }

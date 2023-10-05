@@ -1,6 +1,5 @@
 package com.gls.parcelshop.model
 
-import lombok.NoArgsConstructor
 import javax.persistence.*
 import javax.validation.constraints.NotNull
 
