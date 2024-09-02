@@ -50,7 +50,13 @@ class AppStartupRunner @Autowired constructor(private val parcelRepository: Parc
                     parcelNumber = "1004",
                     deliveryDate = "20200420",
                     deliveryState = DeliveryState.READY_FOR_DELIVERY
-                )
+                ),
+                Parcel(
+                    address = Address(consignee = "GLS", street = "Kemperplatz", number = "1", zip = "10785"),
+                    parcelNumber = "1005",
+                    deliveryDate = "20200420",
+                    deliveryState = DeliveryState.OUT_FOR_DELIVERY
+                ),
             )
         )
     }
