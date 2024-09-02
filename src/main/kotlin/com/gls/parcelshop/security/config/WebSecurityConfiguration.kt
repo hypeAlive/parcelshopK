@@ -28,7 +28,7 @@ open class WebSecurityConfiguration {
         }.and().sessionManagement { configurer ->
             configurer.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
         }.authorizeRequests { authorize ->
-            authorize.antMatchers("/api/v1/parcels").permitAll()
+            authorize.antMatchers("/api/v1/parcels/**").permitAll()
             authorize.anyRequest().authenticated()
         }
         return http.build()
